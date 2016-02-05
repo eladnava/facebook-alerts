@@ -1,0 +1,27 @@
+{
+  "name": "facebook-alerts",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eladnava/facebook-alerts"
+  },
+  "private": true,
+  "description": "Automatically notifies you of interesting posts published to preconfigured Facebook feeds.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Elad Nava",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-monk": "^1.0.0",
+    "koa": "1.1.2",
+    "koa-request": "^1.0.0",
+    "koa-route": "2.4.2",
+    "koa-static": "1.5.2",
+    "monk": "^1.0.1",
+    "node-ses": "^1.1.0",
+    "thunkify": "^2.1.2"
+  }
+}
