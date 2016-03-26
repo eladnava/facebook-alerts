@@ -1,31 +1,27 @@
-// Dependencies
 var koa = require('koa');
-
-// App config
+var route = require('koa-route');
 var config = require('./config');
-
-// Custom koa middleware
-var router = require('./api/router');
-var tasks = require('./api/lib/tasks');
-var error = require('./api/lib/middleware/error');
+var tasks = require('./lib/tasks');
+var error = require('./lib/middleware/error');
 
 // Create koa app
 var app = koa();
 
-// Use koa middleware
+// Koa middleware
 app.use(error());
 
-// Define app routes
-router(app);
+// API routes
+app.use(route.get('/', require('./routes/index')));
+app.use(route.get('/sync', require('./routes/sync')));
 
-// Define configurable port
+// API port
 var port = process.env.PORT || config.api.port;
 
 // Listen for connections
 app.listen(port);
 
 // Log port
-console.log('Server listening on http://localhost:' + port);
+console.log('Server listening on port ' + port);
 
 // Schedule repeating tasks
 tasks.schedule();

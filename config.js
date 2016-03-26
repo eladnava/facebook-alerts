@@ -4,7 +4,7 @@ module.exports = {
         port: 3000,
         // MongoDB database URI
         mongodb: {
-            endpoint: 'mongodb://username:password@hostname.com:port/dbname'
+            endpoint: 'mongodb://localhost/test'
         },
         // Sync config
         sync: {
@@ -19,8 +19,7 @@ module.exports = {
             // User Access Token with feed permissions (preferrably extended)
             access_token: 'CAANeSyXrZAakBA...',
             // Facebook node IDs
-            nodes:
-            [
+            nodes: [
                 '1234567891234567',
                 '8912345678912345'
             ]
