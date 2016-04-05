@@ -14,7 +14,7 @@ The following Facebook node types can be monitored for interesting posts:
 
 ## Sample Use Case
 
-An real-life use-case for Facebook Alerts is subscribing to alerts about interesting apartment rental posts. This is useful in case you are a member of several Facebook groups whose members post all sorts of apartment listing posts and you wish to filter them according to specific parameters (such as the number of bedrooms, pet allowance, etc), all while getting a near-realtime notification as soon as they are posted, so you can snatch one of the apartments before somebody else does.
+A real-life use-case for Facebook Alerts is subscribing to alerts about interesting apartment rental posts. This is useful in case you are a member of several Facebook groups whose members post all sorts of apartment listing posts and you wish to filter them according to specific parameters (such as the number of bedrooms, pet allowance, etc), all while getting a near-realtime notification as soon as they are posted, so you can snatch one of the apartments before somebody else does.
 
 # Requirements
 
