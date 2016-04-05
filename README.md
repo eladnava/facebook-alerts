@@ -16,7 +16,7 @@ The following Facebook node types can be monitored for interesting posts:
 
 A real-life use-case for Facebook Alerts is subscribing to alerts about interesting apartment rental posts. This is useful in case you are a member of several Facebook groups whose members post all sorts of apartment listing posts and you wish to filter them according to specific parameters (such as the number of bedrooms, pet allowance, etc), all while getting a near-realtime notification as soon as they are posted, so you can snatch one of the apartments before somebody else does.
 
-# Requirements
+## Requirements
 
 * MongoDB database for post persistence
 * Node.js `v4.2.x+` for ES6 generators support
@@ -24,7 +24,7 @@ A real-life use-case for Facebook Alerts is subscribing to alerts about interest
 * Amazon Web Services account (free tier) + Amazon SES (Simple Email Service) to send the alert emails
 * Facebook application with `v2.3` Graph API version support (`v2.3` only necessary if you wish to monitor Facebook groups)
 
-# Instructions
+## Instructions
 
 ### 1. Configure the MongoDB URI
 
@@ -90,13 +90,13 @@ Next, let's set up the alert rules for defining which posts interest us and whic
 2. If all is well, deploy to a cloud service of your choice (AWS Elastic Beanstalk recommended, using the free tier)
 3. Enjoy automated alerts about interesting posts delivered straight to your inbox!
 
-# Collaborating
+## Contributing
 
 * If you find a bug or wish to make some kind of change, please create an issue first
 * Make your commits as tiny as possible - one feature or bugfix at a time
 * Write detailed commit messages, in-line with the project's commit naming conventions
 * Make sure your code conventions are in-line with the project
 
-# License
+## License
 
 Apache 2.0
