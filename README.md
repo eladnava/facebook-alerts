@@ -1,6 +1,6 @@
 # Facebook Alerts
 
-Facebook Alerts is a Node.js app that automatically notifies you of interesting posts published to preconfigured Facebook feeds. 
+A Node.js app that automatically notifies you of interesting posts published to preconfigured Facebook feeds. 
 
 It runs every hour, traversing the preconfigured feeds and marking each post as interesting or irrelevant, based on the configurable `whitelist` and `blacklist` rules. Once an interesting post is detected, it automatically sends an e-mail alert to preconfigured e-mails with the post link and content.
 
