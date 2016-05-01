@@ -64,7 +64,7 @@ module.exports = function* () {
                 from: config.alerts.from,
                 bcc: config.alerts.to,
                 subject: '[Facebook Alerts] Interesting post found',
-                message: '<p dir="rtl">' + post.message + '<br /><br />' + nodeName + ':<br />' + postUrl + "</p>"
+                message: '<p dir="ltr">' + post.message + '<br /><br />' + nodeName + ':<br />' + postUrl + "</p>"
             };
 
             // Send the alert e-mail
