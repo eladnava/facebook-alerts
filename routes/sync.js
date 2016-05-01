@@ -3,6 +3,9 @@ var config = require('../config');
 var request = require('koa-request');
 var posts = require('../model/posts');
 
+// Initialize SES client with access key and secret key
+var client = ses.createClient({ key: config.alerts.ses.key, secret: config.alerts.ses.secret });
+
 // POST /sync
 module.exports = function* () {
     // Log start
@@ -61,11 +64,11 @@ module.exports = function* () {
                 from: config.alerts.from,
                 bcc: config.alerts.to,
                 subject: '[Facebook Alerts] Interesting post found',
-                message: '<p dir="ltr">' + post.message + '<br /><br />' + nodeName + ':<br />' + postUrl + "</p>"
+                message: '<p dir="rtl">' + post.message + '<br /><br />' + nodeName + ':<br />' + postUrl + "</p>"
             };
 
             // Send the alert e-mail
-            yield exports.sendEmail(email);
+            yield sendEmail(email);
 
             // Insert post to avoid re-sending an alert for this post ID
             yield posts.insert(post);
@@ -105,7 +108,7 @@ function sendEmail(email) {
     // Promisify the function
     return new Promise(function(resolve, reject) {
         // Actually send the email
-        ses.sendEmail(email, function(err, data, res) {
+        client.sendEmail(email, function(err, data, res) {
             if (err) {
                 // Failed
                 return reject(err);
